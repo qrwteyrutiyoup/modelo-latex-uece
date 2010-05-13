@@ -330,7 +330,7 @@
 \renewenvironment{thebibliography}[1]%
   {% replacing \chapter*{\ABNTbibliographyname\@mkboth...}
    \if@openright\cleardoublepage\else\clearpage\fi%
-   \thispagestyle{empty}%
+%    \thispagestyle{empty}%
    \global\@topnum\z@%
    \@afterindentfalse%
    \@mkboth{\ABNTbibliographyname}{\ABNTbibliographyname}% end \chapter*{\ABNTbibliographyname...}
@@ -456,7 +456,7 @@
 \def\@makechapterhead#1{%
   {%
 %  \noindent\rule{\textwidth}{1.7pt}\\\par
-	\thispagestyle{empty}%
+% 	\thispagestyle{empty}%
   \normalsize\bfseries%
   \espaco{simples}%
   \noindent%
