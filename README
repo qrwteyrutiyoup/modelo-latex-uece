@@ -3,7 +3,7 @@ Modelo de monografia em LaTeX da Universidade Estadual do Ceará (UECE)
 
 - Baseado no modelo desenvolvido por Rudy Matela (http://www.larces.uece.br/~rudy/pub/modelo_monografia/)
 
-Versão 0.1 - 13 de maio de 2010
+Versão 02 - 13 de maio de 2010
 
 TODO:
 - fazer *tudo* em LaTeX, deixando o trabalho mais portável, o que implica em tentar se livrar do Makefile, 
