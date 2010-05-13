@@ -1,0 +1,563 @@
+% uece.sty
+%
+% Pacote LaTeX contendo definições para facilitar a criação de trabalhos
+% seguindo o padrão da Universidade Estadual do Ceará.
+%
+% Autor: Rudy Matela
+% data: 20081208
+%
+% modificado por Sergio Correia
+% data: 20100513
+
+\RequirePackage{lastpage}
+
+\newcommand{\DataAprovacao}{}
+\newcommand{\dataaprovacao}[1]{\renewcommand{\DataAprovacao}{#1}}
+\dataaprovacao{\_\_/\_\_/\_\_\_\_}
+
+\newcommand{\ABNTcentrodata}{}
+\newcommand{\centro}[1]{\renewcommand{\ABNTcentrodata}{#1}}
+
+\newcommand{\ABNTcursodata}{}
+\newcommand{\curso}[1]{\renewcommand{\ABNTcursodata}{#1}}
+
+\newcommand{\UECEcursosimples}{}
+\newcommand{\cursosimples}[1]{\renewcommand{\UECEcursosimples}{#1}}
+
+\newcommand{\ABNTautorrdata}{}
+\newcommand{\autorr}[1]{\renewcommand{\ABNTautorrdata}{#1}}
+
+\newcommand{\ABNTepigrafedata}{}
+\newcommand{\epigrafe}[1]{\renewcommand{\ABNTepigrafedata}{#1}}
+
+\newcommand{\ABNTautorepigrafedata}{}
+\newcommand{\autorepigrafe}[1]{\renewcommand{\ABNTautorepigrafedata}{#1}}
+
+\newcommand{\ABNTkwumdata}{}
+\newcommand{\kwum}[1]{\renewcommand{\ABNTkwumdata}{#1}}
+\newcommand{\ABNTkwdoisdata}{}
+\newcommand{\kwdois}[1]{\renewcommand{\ABNTkwdoisdata}{#1}}
+\newcommand{\ABNTkwtresdata}{}
+\newcommand{\kwtres}[1]{\renewcommand{\ABNTkwtresdata}{#1}}
+\newcommand{\ABNTkwquatrodata}{}
+\newcommand{\kwquatro}[1]{\renewcommand{\ABNTkwquatrodata}{#1}}
+\newcommand{\ABNTkwcincodata}{}
+\newcommand{\kwcinco}[1]{\renewcommand{\ABNTkwcincodata}{#1}}
+\newcommand{\ABNTkwseisdata}{}
+\newcommand{\kwseis}[1]{\renewcommand{\ABNTkwseisdata}{#1}}
+
+\newcommand{\ABNTpcumdata}{}
+\newcommand{\pcum}[1]{\renewcommand{\ABNTpcumdata}{#1}}
+\newcommand{\ABNTpcdoisdata}{}
+\newcommand{\pcdois}[1]{\renewcommand{\ABNTpcdoisdata}{#1}}
+\newcommand{\ABNTpctresdata}{}
+\newcommand{\pctres}[1]{\renewcommand{\ABNTpctresdata}{#1}}
+\newcommand{\ABNTpcquatrodata}{}
+\newcommand{\pcquatro}[1]{\renewcommand{\ABNTpcquatrodata}{#1}}
+\newcommand{\ABNTpccincodata}{}
+\newcommand{\pccinco}[1]{\renewcommand{\ABNTpccincodata}{#1}}
+\newcommand{\ABNTpcseisdata}{}
+\newcommand{\pcseis}[1]{\renewcommand{\ABNTpcseisdata}{#1}}
+
+\newcommand{\ABNTbancaumdata}{}
+\newcommand{\bancaum}[1]{\renewcommand{\ABNTbancaumdata}{#1}}
+\newcommand{\ABNTbancadoisdata}{}
+\newcommand{\bancadois}[1]{\renewcommand{\ABNTbancadoisdata}{#1}}
+\newcommand{\ABNTbancatresdata}{}
+\newcommand{\bancatres}[1]{\renewcommand{\ABNTbancatresdata}{#1}}
+\newcommand{\ABNTbancaquatrodata}{}
+\newcommand{\bancaquatro}[1]{\renewcommand{\ABNTbancaquatrodata}{#1}}
+
+\newcommand{\ABNTcodigocipum  }{} \newcommand{\codigocipum  }[1]{\renewcommand{\ABNTcodigocipum}{#1}}
+\newcommand{\ABNTcodigocipdois}{} \newcommand{\codigocipdois}[2]{\renewcommand{\ABNTcodigocipdois}{#1}}
+\newcommand{\codigocip}[2]{\codigocipum{#1}\codigocipdois{#2}}
+
+\newcommand{\ABNTcidadedata}{}
+\newcommand{\cidade}[1]{\renewcommand{\ABNTcidadedata}{#1}}
+
+\newcommand{\kws}[5]{\kwum{#1}\kwdois{#2}\kwtres{#3}\kwquatro{#4}\kwcinco{#5}}
+\newcommand{\pcs}[5]{\pcum{#1}\pcdois{#2}\pctres{#3}\pcquatro{#4}\pccinco{#5}}
+
+\newcommand{\keywords}{
+	\textbf{Keywords}: \ABNTkwumdata. \ABNTkwdoisdata. \ABNTkwtresdata.
+	\ABNTkwquatrodata. \ABNTkwcincodata. \ABNTkwseisdata }
+
+\newcommand{\palavraschave}{
+	\textbf{Palavras-Chave}: \ABNTpcumdata. \ABNTpcdoisdata. \ABNTpctresdata.
+	 \ABNTpcquatrodata. \ABNTpccincodata. \ABNTpcseisdata
+}
+
+
+\renewcommand{\capa}{
+	\begin{center}
+
+		\includegraphics[width=2.5cm]{modelo/fig/uece}
+
+		\normalsize\ABNTchapterfont
+
+		\MakeUppercase{\ABNTinstituicaodata}
+
+		\vspace{0.5cm}
+
+		\MakeUppercase{\ABNTautordata}
+
+		\vspace{4cm}
+
+		\Large\ABNTchapterfont\MakeUppercase{\ABNTtitulodata}
+
+		\vfill
+		\normalsize\MakeUppercase\ABNTlocaldata
+
+		\normalsize\ABNTdatadata
+
+	\end{center}
+	\pagebreak
+	\setcounter{page}{1}
+}
+
+
+\renewcommand{\folhaderosto}{
+
+	\begin{center}
+		\normalsize\ABNTchapterfont\MakeUppercase\ABNTautordata\par
+		\vspace{4.0cm}\par
+		\normalsize\ABNTchapterfont\MakeUppercase\ABNTtitulodata
+	\end{center}
+
+	\vspace{4cm}
+
+	\hspace{.35\textwidth}
+	\begin{minipage}{.5\textwidth}
+		\begin{espacosimples}
+			\ABNTcomentariodata\par
+		\end{espacosimples}
+		\hspace{.35\textwidth}
+		\begin{espacosimples}
+			\esporient{\numberline {Orientador:}}{\ignorespaces\ABNTorientadordata}
+		\end{espacosimples}
+		\ABNTifnotempty{\ABNTcoorientadordata}{
+			\hspace{.35\textwidth}
+			\begin{espacosimples}
+				\espcoorient{\numberline {Co-Orientadores:}}{\ignorespaces\ABNTcoorientadordata}
+			\end{espacosimples}
+		}
+	\end{minipage}
+
+	\vfill
+
+	\begin{center}
+		\normalsize\textbf{\MakeUppercase\ABNTlocaldata}\par
+		\normalsize\textbf{\ABNTdatadata}
+	\end{center}
+
+	\pagebreak
+}
+
+
+\gdef\uececiptitle{Dados Internacionais de Catalogação na Publicação (CIP)}
+\newcommand{\makecippage}{
+	\vspace*{14cm}
+	\begin{center}
+		\cipwindow
+	\end{center}
+	\vfill
+}
+
+
+\def\cipwindow{
+\small
+	\framebox[12.5cm]{
+		\begin{minipage}[b][7.5cm][t]{1.5cm}
+			\ABNTcodigocipum
+		\end{minipage}
+		\hfill
+		\begin{minipage}[b][7.5cm][s]{10cm}
+			\ABNTautorrdata.
+
+			\hspace{0.5cm}
+			 \ABNTtitulodata\ / \ABNTautordata. -- \ABNTcidadedata, \ABNTdatadata.
+
+			\hspace{0.5cm}
+			\pageref{LastPage} p.;il.
+
+			\uececipdata
+
+			\begin{flushright}
+				\ABNTcodigocipdois
+			\end{flushright}
+		\end{minipage}
+	}
+}
+
+
+\gdef\uececipdata{
+	\hspace{0.5cm}
+	\small Orientador: Prof. Dr. \ABNTorientadordata
+
+	\hspace{0.5cm}
+	\small Monografia (\ABNTcursodata) - \ABNTinstituicaodata, \ABNTcentrodata.
+   
+	\hspace{0.5cm}
+	$1$. \ABNTpcumdata\ $2$. \ABNTpcdoisdata\ $3$. \ABNTpctresdata\ $4$.
+	\ABNTpcquatrodata\ $5$. \ABNTpccincodata\ I.
+	\ABNTinstituicaodata, \ABNTcentrodata.
+
+}
+
+
+
+% ******** FOLHA DE ROSTO *********
+\newcommand{\esporient}[2]{
+	\leftskip 0em
+	\@tempdima 5.5em
+	\advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+	{#1#2\hfil}}
+
+\newcommand{\espcoorient}[2]{
+	\leftskip 0em
+	\@tempdima 7em
+	\advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+	{#1#2\hfil}}
+
+% Altera o tamanho das fontes dos capítulos e dos apêndices
+% fontstyle for header elements
+\renewcommand{\rightmarkformat}{\small}
+\renewcommand{\leftmarkformat}{}
+\renewcommand{\thepageformat}{\small}
+\renewcommand{\ABNTchaptersize}{\huge}
+\renewcommand{\ABNTCHAPTERfont}{\bfseries}
+\renewcommand{\ABNTChapterfont}{\bfseries}
+
+\renewcommand{\ABNTsectionfontsize}{\normalsize}
+\renewcommand{\ABNTsectionfont}{\bfseries}
+\renewcommand{\ABNTsubsectionfontsize}{\normalsize}
+\renewcommand{\ABNTsubsectionfont}{\bfseries}
+\renewcommand{\ABNTsubsubsectionfontsize}{\normalsize}
+\renewcommand{\ABNTsubsubsectionfont}{\bfseries}
+\renewcommand{\ABNTparagraphfontsize}{\normalsize}
+\renewcommand{\ABNTparagraphfont}{\bfseries}
+\renewcommand{\ABNTsubparagraphfontsize}{\normalsize}
+\renewcommand{\ABNTsubparagraphfont}{\normalfont\bfseries}
+\renewcommand{\ABNTanapsize}{\normalsize}
+
+
+
+%Altera o espaçamento entre dots
+\renewcommand\@dotsep{2}
+% \setlength{\headsep}{\headsep + 1.0cm}
+% 
+% \setlength{\footskip}{2cm}
+% \setlength{\topmargin}{2cm-1in-\voffset}
+% % \setlength{\headheight}{0cm}
+
+
+
+
+
+
+%Altera forma de montagem do table of contents
+\renewcommand\l@chapter[2]{
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+%      \vskip 1.5cm \@plus\p@
+    \setlength\@tempdima{3.2em}%
+    \begingroup
+      \ifthenelse{\boolean{ABNTpagenumstyle}}
+        {\renewcommand{\@pnumwidth}{3.5em}}
+        {}
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \normalsize\ABNTtocchapterfont
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      \MakeUppercase{#1}\nobreak\normalfont\dotfill\nobreak%
+      \ifthenelse{\boolean{ABNTpagenumstyle}}
+         {%
+          \hb@xt@\@pnumwidth{\hss 
+            \ifthenelse{\not\equal{#2}{}}{{\normalfont p.\thinspace#2}}{}}\par
+         }
+         {%
+          \hb@xt@\@pnumwidth{\hss #2}\par
+         }
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+
+
+\def\@makeanapchapterhead#1{%
+  {%
+%  \noindent\rule{\textwidth}{1.7pt}\\\par
+  \normalfont\ABNTchapterfont\ABNTanapsize
+  \espaco{simples}
+  \ifthenelse{\boolean{ABNTAnApIndicativoIndent}}
+    {\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
+       {\settowidth{\ABNTanapindent}{\MakeUppercase{\anapchaptername}
+          \thechapter{} \ABNTtravessao{}}}
+       {\settowidth{\ABNTanapindent}{\anapchaptername
+          \thechapter{} \ABNTtravessao{}}}
+    }
+    {}
+%   \vspace*{30pt}
+%
+  \raggedright\espaco{1.2}\par
+  \begin{list}{}{%
+       \setlength{\listparindent}{0cm}%
+       \setlength{\itemindent}{-\ABNTanapindent}%
+       \setlength{\rightmargin}{0cm}%
+       \setlength{\leftmargin}{\ABNTanapindent}%
+       \setlength{\parsep}{0pt}}%
+    \item %
+      \ifthenelse{\equal{#1}{}}
+         {\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
+            {\MakeUppercase{\anapchaptername}}
+            {\anapchaptername}
+          \thechapter \ABNTaposindicativoanap}
+         {\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
+            {\MakeUppercase{\anapchaptername}}                                                                                                                     
+            {\anapchaptername}                                                                                                                                     
+          \thechapter{} \ABNTtravessao{} \ABNTaposindicativoanap                                                                                                   
+            \ifthenelse{\boolean{ABNTcapchap}}%                                                                                                                    
+              {\MakeUppercase{#1}}%                                                                                                                                
+              {#1}}                                                                                                                                                
+  \end{list}                                                                                                                                                       
+  \par\vspace{25pt}%                                                                                                                                               
+  }%                      
+}           
+
+% ====  thebibliography  ====
+% Almost equal to old thebibliography, but without capital page marks
+% and automatically in toc if active ``sumario completo''
+\renewenvironment{thebibliography}[1]%
+  {% replacing \chapter*{\ABNTbibliographyname\@mkboth...}
+   \if@openright\cleardoublepage\else\clearpage\fi%
+   \thispagestyle{empty}%
+   \global\@topnum\z@%
+   \@afterindentfalse%
+   \@mkboth{\ABNTbibliographyname}{\ABNTbibliographyname}% end \chapter*{\ABNTbibliographyname...}
+   \ifthenelse{\boolean{ABNTincludeintoc}}%
+      {\ABNTaddcontentsline{toc}{chapter}{\numberline{}\ABNTbibliographyname}}
+      {}
+    \if@twocolumn%
+      \@topnewpage[\@makeschapterhead{\ABNTbibliographyname}]%
+    \else%
+      \@makeschapterhead{\ABNTbibliographyname}%
+      \@afterheading%
+    \fi%
+   \list{\@biblabel{\@arabic\c@enumiv}}%
+        {\settowidth\labelwidth{\@biblabel{#1}}%
+         \leftmargin\labelwidth%
+         \advance\leftmargin\labelsep%
+         \@openbib@code%
+         \usecounter{enumiv}%
+         \let\p@enumiv\@empty%
+         \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+   \sloppy%
+   \espaco{simples}
+   \clubpenalty4000%
+   \@clubpenalty \clubpenalty%
+   \widowpenalty4000%
+   \sfcode`\.\@m%
+  }% end of \begin{thebibliography}
+  {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+   \endlist%
+  }% end of \end{thebibliography}
+
+
+% 
+\renewcommand*\l@section[2]{\@dottedtocline{1}{0em}{3.2em}{\textbf{#1}}{#2} }
+\renewcommand*\l@subsection{\normalfont\@dottedtocline{2}{0em}{3.2em}}
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{0em}{3.2em}}
+
+
+% Cria um comando auxiliar para montagem da lista de figuras
+\newcommand{\figfillnum}[1]{%
+  {\hspace{1em}\normalfont\dotfill}\nobreak
+  \hb@xt@\@pnumwidth{\hfil\normalfont #1}{}\par}
+
+
+% Cria um comando auxiliar para montagem da lista de tabelas
+\newcommand{\tabfillnum}[1]{%
+	{\hspace{1em}\normalfont\dotfill}\nobreak
+	\hb@xt@\@pnumwidth{\hfil\normalfont #1}{}\par}
+
+
+% Altera a forma de montagem da lista de figuras
+\renewcommand*{\l@figure}[2]{
+	\leftskip 3.1em
+	\rightskip 1.6em
+	\parfillskip -\rightskip
+	\parindent 0em
+	\@tempdima 2.0em
+	\advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+	{Figura \normalfont #1}\nobreak \figfillnum{#2}}
+
+
+% Altera a forma de montagem de lista de tabelas
+\renewcommand*{\l@table}[2]{
+	\leftskip 3.4em
+	\rightskip 1.6em
+	\parfillskip -\rightskip
+	\parindent 0em
+	\@tempdima 2.0em
+	\advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+	{Tabela \normalfont #1}\nobreak \tabfillnum{#2}}
+
+
+% Define os comandos que montam a lista de símbolos
+\newcommand{\listadesimbolos}{\pretextualchapter{Lista de Símbolos}\@starttoc{lsb}}
+\newcommand{\simbolo}[2]{{\addcontentsline{lsb}{simbolo}{\numberline{#1}{#2}}}#1}
+\newcommand{\l@simbolo}[2]{
+	\vspace{-0.75cm}
+	\leftskip 0em
+	\parindent 0em
+	\@tempdima 7em
+	\advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+	{\normalfont #1}\hfil\nobreak\par}
+
+
+% Define o comando que monta a lista de siglas
+\newcommand{\listadesiglas}{\pretextualchapter{Lista de Siglas}\@starttoc{lsg}}
+\newcommand{\sigla}[2]{{\addcontentsline{lsg}{sigla}{\numberline{#1}{#2}}}#1}
+\newcommand{\l@sigla}[2]{
+	\vspace{-0.75cm}
+	\leftskip 0em
+	\parindent 0em
+	\@tempdima 7em
+	\advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+	{\normalfont #1}\hfil\nobreak\par}
+
+
+% Altera a posição da numeração de páginas dos elementos pré-textuais
+\renewcommand\pretextualchapter{
+	\if@openright\cleardoublepage\else\clearpage\fi
+	\pagestyle{empty}
+	\global\@topnum\z@
+	\@afterindentfalse
+	\@schapter}
+
+
+% Altera a posição da numeração de páginas dos elementos textuais
+\renewcommand{\ABNTchaptermark}[1]{
+	\ifthenelse{\boolean{ABNTNextOutOfTOC}}
+		{\markboth{\ABNTnextmark}{\ABNTnextmark}}
+		{\chaptermark{#1}
+		\pagestyle{\chaptertitlepagestyle}}}
+
+
+% Redefine o tipo de numeração das páginas
+\renewcommand{\ABNTBeginOfTextualPart}{
+	\renewcommand{\chaptertitlepagestyle}{plainheader}
+	\renewcommand{\thepage}{\arabic{page}}
+	}
+
+
+% Ajusta a margem superior dos capítulos (3cm)
+\def\@makechapterhead#1{%
+  {%
+%  \noindent\rule{\textwidth}{1.7pt}\\\par
+	\thispagestyle{empty}%
+  \normalsize\bfseries%
+  \espaco{simples}%
+  \noindent%
+  \parbox[b]{\textwidth}{%
+    \parbox[t]{4ex}{\thechapter}%
+    \parbox[t]{\textwidth-4ex-1ex}%
+      {\interlinepenalty\@M\raggedright%
+        \ifthenelse{\boolean{ABNTcapchap}}%
+          {\MakeUppercase{#1}}%
+          {#1}
+      }%
+    \vspace*{0cm}
+    }\\[2pt]%
+  }%
+}
+
+% Ajusta a margem superior das páginas que contêm elementos
+% pre-textuais - abstract, resumo, agradecimentos, etc. (3cm) 
+\def\@makeschapterhead#1{%
+  {\centering\normalsize\bfseries%
+   \ifthenelse{\boolean{ABNTcapchap}}%
+     {\MakeUppercase{#1}}%
+     {#1}
+    \par}%
+  \vspace{25pt}%
+  \par%
+}
+
+%Altera o tamanho do parágrafo
+\setlength{\parindent}{1.5cm}
+
+\newcommand{\comentariosimplificado}[1]{\newcommand{\ABNTcomentariosimplificadodata}{#1}}
+
+\def\termodeaprovacao{
+	\espaco{1.1}
+
+	\begin{center}
+		\normalsize\ABNTchapterfont
+		\MakeUppercase{\ABNTautordata}\par
+		\vspace{1cm}
+		\MakeUppercase{\ABNTtitulodata}
+	\end{center}
+
+	\vspace{2cm}
+	\hspace{.35\textwidth}
+	\begin{minipage}{.5\textwidth}
+		\begin{espacosimples}
+			\ABNTcomentariosimplificadodata
+		\end{espacosimples}
+	\end{minipage}
+
+	{
+	\noindent \large
+	Aprovada em: \DataAprovacao
+	}
+
+	\vspace{1cm}
+
+	\begin{center}
+	\textbf{BANCA EXAMINADORA}
+	\end{center}
+
+	\setlength{\ABNTsignthickness}{0.4pt}
+	\setlength{\ABNTsignskip}{2cm}
+
+	\ABNTifnotempty{\ABNTbancaumdata}{
+		\vspace{-0.5cm}
+		\assinatura{\ABNTbancaumdata}
+	}
+
+	\ABNTifnotempty{\ABNTbancadoisdata}{
+		\vspace{-0.5cm}
+		\assinatura{\ABNTbancadoisdata}
+	}
+
+	\ABNTifnotempty{\ABNTbancatresdata}{
+		\vspace{-0.5cm}
+		\assinatura{\ABNTbancatresdata}
+	}
+
+	\ABNTifnotempty{\ABNTbancaquatrodata}{
+		\vspace{-0.5cm}
+		\assinatura{\ABNTbancaquatrodata}
+	}
+
+	\vfill
+
+	\pagebreak
+}
+
+
+\def\makeepigrafe{
+	\vspace*{20cm}
+	\hspace{.5\textwidth}
+	\begin{minipage}{.4\textwidth}
+		\par
+		\textit{
+			\ABNTepigrafedata \\ 
+			\bfseries \ABNTautorepigrafedata
+		}
+	\end{minipage}
+	\pagebreak
+}
+

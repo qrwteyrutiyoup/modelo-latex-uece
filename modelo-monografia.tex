@@ -1,0 +1,179 @@
+% Modelo de monografia em LaTeX da UECE baseado no template disponibilizado
+% por Rudy Matela em http://www.larces.uece.br/~rudy/pub/modelo_monografia/
+
+\input{modelo/tex/preambulo}
+
+
+% Informações gerais do documento
+\autor{Sérgio Luis Olinda Braga Correia}
+\autorr{Correia, Sérgio Luis Olinda Braga}
+\titulo{O protocolo de roteamento bioinspirado Ant-DYMO em VANETs}
+\orientador{Joaquim Celestino Júnior}
+
+% essas informacoes do codigo CIP você consegue indo na biblioteca central
+\codigocip{C824p}{CDD:001.6}
+
+
+% Epígrafe: citação e autor (OPCIONAL)
+\epigrafe{``So many beautiful women and so little time.''}
+\autorepigrafe{John Barrymore}
+
+
+% Membros da comissão avaliadora
+\bancaum{Prof. Dr. \ABNTorientadordata\ -- UECE\\(Orientador)}
+\bancadois{Prof. Dr. Gustavo Augusto de Lima Campos -- UECE} 
+\bancatres{Prof. Dr. Jorge Luiz de Castro e Silva -- UECE}
+
+% data de aprovação
+\dataaprovacao{15/04/2010}
+
+% Palavras chave
+\pcs{VANET}{Roteamento}{ACO}{NS-2}{SUMO}
+\kws{VANET}{Routing}{ACO}{NS-2}{SUMO}
+
+\begin{document}
+
+% início do documento. lembrando que o documento é
+% composto de elementos pre-textuais e pos-textuais,
+% alem do texto propriamente dito
+%
+% sao OBRIGATÓRIOS os seguintes elementos pre-textuais:
+% - capa
+% - folha de rosto
+% - folha de catalogação (CIP)
+% - termo de aprovação
+% - resumo
+% - abstract
+%
+% sao OPCIONAIS os seguintes:
+% - dedicatória
+% - agradecimentos
+% - epígrafe (citacao)
+% - listas de figuras, tabelas, siglas, etc
+
+\capa
+\folhaderosto
+\makecippage
+\termodeaprovacao
+
+% AGRADECIMENTOS - opcional
+\pretextualchapter{Agradecimentos}
+
+\noindent
+À minha família, pelo incentivo e apoio nos momentos difíceis. 
+
+\noindent
+Aos amigos que conheci na UECE ao longo destes anos, pela ajuda e
+amizade. Em especial, aos colegas Filipe Maciel, Jeandro Mesquita, Rudy Matela,
+Sérgio Vieira, Pablo Ximenes e demais computeiros.
+
+\noindent
+Ao professor Joaquim Celestino Júnior pela orientação e oportunidades de
+iniciação à pesquisa.
+
+\noindent
+Aos professores Gustavo Campos e Everardo Maia pelas discussões
+produtivas que contribuíram para este trabalho. 
+
+\noindent
+À maioria dos professores que tive durante este curso de Ciência da
+Computação da UECE, por sua dedicação, comprometimento e compreensão. 
+
+\noindent
+Aos professores que não estão incluídos no grupo anterior, por mostrar
+como não se deve fazer as coisas, caso um dia eu me torne um professor.
+
+\noindent
+A todas as pessoas que passaram pela minha vida e contribuíram para a
+construção de quem sou hoje.
+
+\pagebreak
+
+\makeepigrafe
+
+% sumario
+\renewcommand{\contentsname}{SUMÁRIO}
+\tableofcontents
+
+% caso haja lista de figuras
+\listadefiguras
+
+% caso haja lista de tabelas
+\listadetabelas
+
+% caso haja lista de siglas
+%   exemplo de sigla:
+%   \sigla{UECE}{Universidade Estadual do Ceará}
+\listadesiglas
+
+% espaço de um e meio
+\onehalfspace
+
+
+% RESUMO - obrigatorio
+\begin{resumo}
+\noindent
+\sigla{VANETs}{Vehicular Ad hoc NETworks} (\textit{Vehicular Ad hoc NETworks})
+são um tipo especial de rede móvel \textit{ad hoc} (\sigla{MANET}{\textit{Mobile ad
+hoc NETwork}}, \textit{Mobile ad hoc NETwork}) formada por veículos entre si, e
+entre veículos e dispositivos que fazem parte da infraestrutura de ruas e
+rodovias. Apesar de compartilharem várias características com as MANETs
+tradicionais, as VANETs apresentam algumas diferenças significativas, como por
+exemplo o movimento do nós, aleatórios nas MANETs, mas relativamente ordenado
+nas VANETs, já que os veículos têm de obedecer as chamadas regras de trânsito.
+Neste trabalho, o protocolo de roteamento bioinspirado Ant-DYMO é simulado em
+um cenário veicular e tem seu desempenho comparado com o do protocolo DYMO.
+Além disso, é proposta uma modificação simples no mecanismo de criação de
+formigas do protocolo bioinspirado original, com o objetivo de verificar
+possíveis melhoras no desempenho geral do algoritmo, quando levando em
+consideração algumas das características próprias das redes veiculares, como a
+informação da vizinhança de veículos.
+% deixe essa linha em branco
+
+\vspace{1cm}
+\noindent
+\palavraschave
+\end{resumo}
+\pagebreak
+
+% ABSTRACT - obrigatorio
+\begin{abstract}
+\noindent
+VANETs (Vehicular Ad hoc NETworks) are a special type of the Mobile Ad hoc
+NETworks (MANETs), made by vechicles communicating between themselves as well as
+by vechicles communicating with devices located at the margins of roads and
+highways. Despite sharing many characteristics with the traditional
+MANETs, VANETs present some siginificant differences. For instance, the
+nodes movement, completely random in MANETs, but relatively ordered in the
+VANETs, since the nodes -- the vehicles -- are supposed to obey a set of
+transit rules. In this work, the bio-inspired routing protocol Ant-DYMO is
+evaluated in a VANET scenario and has its performance compared with the DYMO
+protocol. Furthermore, a simple modification is proposed in the bio-inspired
+mechanisms of Ant-DYMO. The objective is to verify a possible improvement in
+the overall performance of the algorithm when taking into account some
+characteristics inherent to the vehicular networks, such as neighboring
+vehicle information.
+% deixe essa linha em branco
+
+\vspace{1cm}
+\noindent
+\keywords
+\end{abstract}
+\pagebreak
+
+% agora adicione os capítulos
+\input{chapters/vanets}
+
+% bibliografia
+\bibliography{references}
+
+% caso haja apêndices, use apendice antes de inserir
+% as secoes
+\apendice
+% adicione os apendices, caso existam
+\input{chapters/apendice-nakagami}
+
+% fim :)
+
+\end{document}
+

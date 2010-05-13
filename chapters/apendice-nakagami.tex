@@ -1,0 +1,42 @@
+\chapter{Modelo de desvanecimento de \textit{Nakagami}}
+\label{apendice:nakagami}
+
+O modelo de propagação de \textit{Nakagami} é usado para modelar um
+canal de rádio com desvanecimento. Comparado a outros modelos existentes, como
+o \textit{Shadowing} e o \textit{Two-Ray Ground}, o modelo de \textit{Nakagami}
+apresenta mais parâmetros de configuração que permitem uma representação mais
+fiel de um canal de comunicação \textit{wireless}. Ele é capaz de modelar
+desde canais totalmente livres de desvanecimento a canais com desvanecimento
+moderado, como uma \textit{highway}, por exemplo.
+
+A distribuição de \textit{Nakagami} \cite{nakagami1957m} é definida pela
+seguinte função de densidade de probabilidade:
+
+\begin{displaymath}
+f(x) =
+\frac{2m^{m}x^{2m-1}}{\Gamma(m)\Omega^{m}}\exp\Bigg[-\frac{mx^{2}}{\Omega}\Bigg],
+\ x \geq 0,\ \Omega > 0,\ m \geq \frac{1}{2}
+\end{displaymath}
+
+A função de densidade de probabilidade correspondente à potência -- quadrado da
+amplitude do sinal -- em uma dada distância pode ser obtida por uma mudança de
+variáveis e é dada por uma distribuição gama da seguinte forma:
+
+\begin{displaymath}
+p(x) =
+\Bigg(\frac{m}{\Omega}\Bigg)^{m}\frac{x^{m-1}}{\Gamma(m)}\exp\Bigg[-\frac{mx}{\Omega}\Bigg],
+\ x \geq 0
+\end{displaymath}
+
+$\Omega$ é o valor esperado da distribuição e pode ser interpretado como a
+potência média recebida. $m$ é o parâmetro de desvanecimento.
+
+Os valores dos parâmetros $m$ e $\Omega$ são funções da distância, e o modelo
+de \textit{Nakagami} é então definido por duas funções: $\Omega(d)$ e $m(d)$.
+
+\begin{itemize}
+  \item\ A distribuição de \textit{Rayleigh} \cite{papoulis2002probability}
+  é um caso especial da de \textit{Nakagami}, onde $m(d) = 1$ para qualquer $d$.
+  \item\ Valores maiores de $m$ resultam em desvanecimento menos acentuado.
+\end{itemize}
+
