@@ -30,39 +30,8 @@ Universidade Estadual do Ceará -- UECE}
 % data de aprovação
 \dataaprovacao{15/04/2010}
 
-% Palavras chave
-\pcs{VANET}{Roteamento}{ACO}{NS-2}{SUMO}
-\kws{VANET}{Routing}{ACO}{NS-2}{SUMO}
-
-\begin{document}
-
-% início do documento. lembrando que o documento é
-% composto de elementos pre-textuais e pos-textuais,
-% alem do texto propriamente dito
-%
-% sao OBRIGATÓRIOS os seguintes elementos pre-textuais:
-% - capa
-% - folha de rosto
-% - folha de catalogação (CIP)
-% - termo de aprovação
-% - resumo
-% - abstract
-%
-% sao OPCIONAIS os seguintes:
-% - dedicatória
-% - agradecimentos
-% - epígrafe (citacao)
-% - listas de figuras, tabelas, siglas, etc
-
-\capa
-\folhaderosto
-\makecippage
-\termodeaprovacao
-
-% AGRADECIMENTOS - opcional
-\pretextualchapter{Agradecimentos}
-
-\noindent
+% Agradecimentos
+\agradecimentostext{\noindent
 À minha família, pelo incentivo e apoio nos momentos difíceis. 
 
 \noindent
@@ -90,46 +59,34 @@ como não se deve fazer as coisas, caso um dia eu me torne um professor.
 A todas as pessoas que passaram pela minha vida e contribuíram para a
 construção de quem sou hoje.
 
-\pagebreak
+}
 
-\makeepigrafe
+% Resumo/palavras chaves
+\resumotext{\sigla{VANETs}{Vehicular Ad hoc NETworks} (\textit{Vehicular Ad hoc
+NETworks}) são um tipo especial de rede móvel \textit{ad hoc}
+(\sigla{MANET}{\textit{Mobile ad hoc NETwork}}, \textit{Mobile ad hoc NETwork})
+formada por veículos entre si, e entre veículos e dispositivos que fazem parte
+da infraestrutura de ruas e rodovias. Apesar de compartilharem várias
+características com as MANETs tradicionais, as VANETs apresentam algumas
+diferenças significativas, como por exemplo o movimento do nós, aleatórios nas
+MANETs, mas relativamente ordenado nas VANETs, já que os veículos têm de
+obedecer as chamadas regras de trânsito. Neste trabalho, o protocolo de
+roteamento bioinspirado Ant-DYMO é simulado em um cenário veicular e tem seu
+desempenho comparado com o do protocolo DYMO. Além disso, é proposta uma
+modificação simples no mecanismo de criação de formigas do protocolo
+bioinspirado original, com o objetivo de verificar possíveis melhoras no
+desempenho geral do algoritmo, quando levando em consideração algumas das
+características próprias das redes veiculares, como a informação da vizinhança
+de veículos.}
+\pcs{VANET}{Roteamento}{ACO}{NS-2}{SUMO}
 
-
-% RESUMO - obrigatorio
-\begin{resumo}
-\noindent
-\sigla{VANETs}{Vehicular Ad hoc NETworks} (\textit{Vehicular Ad hoc NETworks})
-são um tipo especial de rede móvel \textit{ad hoc} (\sigla{MANET}{\textit{Mobile ad
-hoc NETwork}}, \textit{Mobile ad hoc NETwork}) formada por veículos entre si, e
-entre veículos e dispositivos que fazem parte da infraestrutura de ruas e
-rodovias. Apesar de compartilharem várias características com as MANETs
-tradicionais, as VANETs apresentam algumas diferenças significativas, como por
-exemplo o movimento do nós, aleatórios nas MANETs, mas relativamente ordenado
-nas VANETs, já que os veículos têm de obedecer as chamadas regras de trânsito.
-Neste trabalho, o protocolo de roteamento bioinspirado Ant-DYMO é simulado em
-um cenário veicular e tem seu desempenho comparado com o do protocolo DYMO.
-Além disso, é proposta uma modificação simples no mecanismo de criação de
-formigas do protocolo bioinspirado original, com o objetivo de verificar
-possíveis melhoras no desempenho geral do algoritmo, quando levando em
-consideração algumas das características próprias das redes veiculares, como a
-informação da vizinhança de veículos.
-% deixe essa linha em branco
-
-\vspace{1cm}
-\noindent
-\palavraschave
-\end{resumo}
-\pagebreak
-
-% ABSTRACT - obrigatorio
-\begin{abstract}
-\noindent
-VANETs (Vehicular Ad hoc NETworks) are a special type of the Mobile Ad hoc
-NETworks (MANETs), made by vechicles communicating between themselves as well as
-by vechicles communicating with devices located at the margins of roads and
-highways. Despite sharing many characteristics with the traditional
-MANETs, VANETs present some siginificant differences. For instance, the
-nodes movement, completely random in MANETs, but relatively ordered in the
+% abstract/keywords
+\abstracttext{VANETs (Vehicular Ad hoc NETworks) are a special type of the
+Mobile Ad hoc NETworks (MANETs), made by vechicles communicating between
+themselves as well as by vechicles communicating with devices located at the
+margins of roads and highways. Despite sharing many characteristics with the
+traditional MANETs, VANETs present some siginificant differences. For instance,
+the nodes movement, completely random in MANETs, but relatively ordered in the
 VANETs, since the nodes -- the vehicles -- are supposed to obey a set of
 transit rules. In this work, the bio-inspired routing protocol Ant-DYMO is
 evaluated in a VANET scenario and has its performance compared with the DYMO
@@ -137,33 +94,19 @@ protocol. Furthermore, a simple modification is proposed in the bio-inspired
 mechanisms of Ant-DYMO. The objective is to verify a possible improvement in
 the overall performance of the algorithm when taking into account some
 characteristics inherent to the vehicular networks, such as neighboring
-vehicle information.
-% deixe essa linha em branco
-
-\vspace{1cm}
-\noindent
-\keywords
-\end{abstract}
-\pagebreak
+vehicle information.}
+\kws{VANET}{Routing}{ACO}{NS-2}{SUMO}
 
 
-% caso haja lista de figuras
-\listadefiguras
 
-% caso haja lista de tabelas
-\listadetabelas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% inicio do documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% caso haja lista de siglas
-%   exemplo de sigla:
-%   \sigla{UECE}{Universidade Estadual do Ceará}
-\listadesiglas
-
-% sumario
-\renewcommand{\contentsname}{SUMÁRIO}
-\tableofcontents
-
-% espaço de um e meio
-\onehalfspace
+\begin{document}
+% o arquivo seguinte contém os elementos pre-textuais. edite-o caso deseje
+% adicionar/remover algum elemento.
+\input{modelo/tex/documento}
 
 % agora adicione os capítulos
 \input{chapters/vanets}
@@ -171,13 +114,11 @@ vehicle information.
 % bibliografia
 \bibliography{references}
 
-% caso haja apêndices, use apendice antes de inserir
+% caso haja apêndices, use ``\apendice'' antes de inserir
 % as secoes
 \apendice
 % adicione os apendices, caso existam
 \input{chapters/apendice-nakagami}
-
-% fim :)
 
 \end{document}
 
