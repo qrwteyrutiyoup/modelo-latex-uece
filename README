@@ -1,11 +1,12 @@
-Modelo de monografia em LaTeX da Universidade Estadual do Ceará (UECE)
+Modelo de monografia em LaTeX da Universidade Estadual do Ceara (UECE)
 ----------------------------------------------------------------------
 
 - Baseado no modelo desenvolvido por Rudy Matela (http://www.larces.uece.br/~rudy/pub/modelo_monografia/)
 
-Versão .3 - 18 de maio de 2010
+* Versao 0.4 - 19 de julho de 2010
+  - atualizacao do sumario (negrito e indentacao)
+  - remocao do script gambiarra pra ordenar siglas
+  - simplificacao do Makefile, que apenas roda o pdflatex + bibtex sem
+    os "extras" de retirar itens do sumario, etc.
 
-TODO:
-- fazer *tudo* em LaTeX, deixando o trabalho mais portável, o que implica em tentar se livrar do Makefile, 
-  que hoje faz algumas gambiarras como ordenação das siglas, remoção de subitems dos apêndices do sumário, 
-  remoção das listas de figuras, tabelas, siglas, etc do sumário.
+* Versao 0.3 - 18 de maio de 2010
